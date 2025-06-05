@@ -22,6 +22,7 @@ import { registerCircleCIConnectionRouter } from "./circleci-connection-router";
 import { registerCloud66ConnectionRouter } from "./cloud-66-connection-router";
 import { registerCloudflareConnectionRouter } from "./cloudflare-connection-router";
 import { registerConvexConnectionRouter } from "./convex-connection-router";
+import { registerCoolifyConnectionRouter } from "./coolify-connection-router";
 import { registerDatabricksConnectionRouter } from "./databricks-connection-router";
 import { registerDatadogConnectionRouter } from "./datadog-connection-router";
 import { registerDaytonaConnectionRouter } from "./daytona-connection-router";
@@ -179,4 +180,5 @@ export const APP_CONNECTION_REGISTER_ROUTER_MAP: Record<AppConnection, (server: 
     [AppConnection.Spacelift]: registerSpaceliftConnectionRouter,
     [AppConnection.Daytona]: registerDaytonaConnectionRouter,
     [AppConnection.Stripe]: registerStripeConnectionRouter
+    [AppConnection.Coolify]: registerCoolifyConnectionRouter
   };

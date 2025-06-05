@@ -85,7 +85,8 @@ export enum AppConnection {
   PowerDns = "powerdns",
   Spacelift = "spacelift",
   Daytona = "daytona",
-  Stripe = "stripe"
+  Stripe = "stripe",
+  Coolify = "coolify"
 }
 
 export enum AWSRegion {
