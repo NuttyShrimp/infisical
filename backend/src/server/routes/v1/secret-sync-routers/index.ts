@@ -17,6 +17,7 @@ import { registerTeamCitySyncRouter } from "./teamcity-sync-router";
 import { registerTerraformCloudSyncRouter } from "./terraform-cloud-sync-router";
 import { registerVercelSyncRouter } from "./vercel-sync-router";
 import { registerWindmillSyncRouter } from "./windmill-sync-router";
+import { registerCoolifySyncRouter } from "./coolify-sync-router";
 
 export * from "./secret-sync-router";
 
@@ -37,5 +38,6 @@ export const SECRET_SYNC_REGISTER_ROUTER_MAP: Record<SecretSync, (server: Fastif
   [SecretSync.HCVault]: registerHCVaultSyncRouter,
   [SecretSync.TeamCity]: registerTeamCitySyncRouter,
   [SecretSync.OCIVault]: registerOCIVaultSyncRouter,
-  [SecretSync.OnePass]: registerOnePassSyncRouter
+  [SecretSync.OnePass]: registerOnePassSyncRouter,
+  [SecretSync.Coolify]: registerCoolifySyncRouter
 };

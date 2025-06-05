@@ -98,6 +98,7 @@ import {
   TTerraformCloudSyncWithCredentials
 } from "./terraform-cloud";
 import { TVercelSync, TVercelSyncInput, TVercelSyncListItem, TVercelSyncWithCredentials } from "./vercel";
+import { TCoolifySync, TCoolifySyncInput, TCoolifySyncListItem, TCoolifySyncWithCredentials } from "./coolify";
 
 export type TSecretSync =
   | TAwsParameterStoreSync
@@ -116,7 +117,8 @@ export type TSecretSync =
   | THCVaultSync
   | TTeamCitySync
   | TOCIVaultSync
-  | TOnePassSync;
+  | TOnePassSync
+  | TCoolifySync;
 
 export type TSecretSyncWithCredentials =
   | TAwsParameterStoreSyncWithCredentials
@@ -135,7 +137,8 @@ export type TSecretSyncWithCredentials =
   | THCVaultSyncWithCredentials
   | TTeamCitySyncWithCredentials
   | TOCIVaultSyncWithCredentials
-  | TOnePassSyncWithCredentials;
+  | TOnePassSyncWithCredentials
+  | TCoolifySyncWithCredentials;
 
 export type TSecretSyncInput =
   | TAwsParameterStoreSyncInput
@@ -154,7 +157,8 @@ export type TSecretSyncInput =
   | THCVaultSyncInput
   | TTeamCitySyncInput
   | TOCIVaultSyncInput
-  | TOnePassSyncInput;
+  | TOnePassSyncInput
+  | TCoolifySyncInput;
 
 export type TSecretSyncListItem =
   | TAwsParameterStoreSyncListItem
@@ -173,7 +177,8 @@ export type TSecretSyncListItem =
   | THCVaultSyncListItem
   | TTeamCitySyncListItem
   | TOCIVaultSyncListItem
-  | TOnePassSyncListItem;
+  | TOnePassSyncListItem
+  | TCoolifySyncListItem;
 
 export type TSyncOptionsConfig = {
   canImportSecrets: boolean;
