@@ -30,6 +30,7 @@ import { registerTerraformCloudSyncRouter } from "./terraform-cloud-sync-router"
 import { registerVercelSyncRouter } from "./vercel-sync-router";
 import { registerWindmillSyncRouter } from "./windmill-sync-router";
 import { registerZabbixSyncRouter } from "./zabbix-sync-router";
+import { registerCoolifySyncRouter } from "./coolify-sync-router";
 
 export * from "./secret-sync-router";
 
@@ -63,5 +64,6 @@ export const SECRET_SYNC_REGISTER_ROUTER_MAP: Record<SecretSync, (server: Fastif
   [SecretSync.Checkly]: registerChecklySyncRouter,
   [SecretSync.DigitalOceanAppPlatform]: registerDigitalOceanAppPlatformSyncRouter,
   [SecretSync.Netlify]: registerNetlifySyncRouter,
-  [SecretSync.Bitbucket]: registerBitbucketSyncRouter
+  [SecretSync.Bitbucket]: registerBitbucketSyncRouter,
+  [SecretSync.Coolify]: registerCoolifySyncRouter
 };

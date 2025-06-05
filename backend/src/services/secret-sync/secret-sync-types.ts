@@ -150,6 +150,7 @@ import {
 } from "./terraform-cloud";
 import { TVercelSync, TVercelSyncInput, TVercelSyncListItem, TVercelSyncWithCredentials } from "./vercel";
 import { TZabbixSync, TZabbixSyncInput, TZabbixSyncListItem, TZabbixSyncWithCredentials } from "./zabbix";
+import { TCoolifySync, TCoolifySyncInput, TCoolifySyncListItem, TCoolifySyncWithCredentials } from "./coolify";
 
 export type TSecretSync =
   | TAwsParameterStoreSync
@@ -180,7 +181,8 @@ export type TSecretSync =
   | TChecklySync
   | TSupabaseSync
   | TNetlifySync
-  | TBitbucketSync;
+  | TBitbucketSync
+  | TCoolifySync;
 
 export type TSecretSyncWithCredentials =
   | TAwsParameterStoreSyncWithCredentials
@@ -212,7 +214,8 @@ export type TSecretSyncWithCredentials =
   | TSupabaseSyncWithCredentials
   | TDigitalOceanAppPlatformSyncWithCredentials
   | TNetlifySyncWithCredentials
-  | TBitbucketSyncWithCredentials;
+  | TBitbucketSyncWithCredentials
+  | TCoolifySyncWithCredentials;
 
 export type TSecretSyncInput =
   | TAwsParameterStoreSyncInput
@@ -244,7 +247,8 @@ export type TSecretSyncInput =
   | TSupabaseSyncInput
   | TDigitalOceanAppPlatformSyncInput
   | TNetlifySyncInput
-  | TBitbucketSyncInput;
+  | TBitbucketSyncInput
+  | TCoolifySyncInput;
 
 export type TSecretSyncListItem =
   | TAwsParameterStoreSyncListItem
@@ -276,7 +280,8 @@ export type TSecretSyncListItem =
   | TSupabaseSyncListItem
   | TDigitalOceanAppPlatformSyncListItem
   | TNetlifySyncListItem
-  | TBitbucketSyncListItem;
+  | TBitbucketSyncListItem
+  | TCoolifySyncListItem;
 
 export type TSyncOptionsConfig = {
   canImportSecrets: boolean;
