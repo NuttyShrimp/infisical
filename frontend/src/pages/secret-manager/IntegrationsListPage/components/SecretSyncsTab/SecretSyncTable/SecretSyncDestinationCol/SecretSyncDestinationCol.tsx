@@ -15,6 +15,7 @@ import { CircleCISyncDestinationCol } from "./CircleCISyncDestinationCol";
 import { Cloud66SyncDestinationCol } from "./Cloud66SyncDestinationCol";
 import { CloudflarePagesSyncDestinationCol } from "./CloudflarePagesSyncDestinationCol";
 import { CloudflareWorkersSyncDestinationCol } from "./CloudflareWorkersSyncDestinationCol";
+import { CoolifySyncDestinationCol } from "./CoolifySyncDestinationCol";
 import { DatabricksSyncDestinationCol } from "./DatabricksSyncDestinationCol";
 import { DaytonaSyncDestinationCol } from "./DaytonaSyncDestinationCol";
 import { DevinSyncDestinationCol } from "./DevinSyncDestinationCol";
@@ -154,6 +155,8 @@ export const SecretSyncDestinationCol = ({ secretSync }: Props) => {
       return <DaytonaSyncDestinationCol secretSync={secretSync} />;
     case SecretSync.Spacelift:
       return <SpaceliftSyncDestinationCol secretSync={secretSync} />;
+    case SecretSync.Coolify:
+      return <CoolifySyncDestinationCol secretSync={secretSync} />;
     default:
       throw new Error(
         `Unhandled Secret Sync Destination Col: ${(secretSync as TSecretSync).destination}`
