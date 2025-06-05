@@ -13,6 +13,7 @@ import { TCamundaConnection } from "./camunda-connection";
 import { TChecklyConnection } from "./checkly-connection";
 import { TChefConnection } from "./chef-connection";
 import { TCloudflareConnection } from "./cloudflare-connection";
+import { TCoolifyConnection } from "./coolify-connection";
 import { TDatabricksConnection } from "./databricks-connection";
 import { TDigitalOceanConnection } from "./digital-ocean";
 import { TDNSMadeEasyConnection } from "./dns-made-easy-connection";
@@ -59,6 +60,7 @@ export * from "./camunda-connection";
 export * from "./checkly-connection";
 export * from "./chef-connection";
 export * from "./cloudflare-connection";
+export * from "./coolify-connection";
 export * from "./databricks-connection";
 export * from "./dns-made-easy-connection";
 export * from "./flyio-connection";
@@ -136,7 +138,8 @@ export type TAppConnection =
   | TRedisConnection
   | TMongoDBConnection
   | TChefConnection
-  | TDNSMadeEasyConnection;
+  | TDNSMadeEasyConnection
+  | TCoolifyConnection;
 
 export type TAvailableAppConnection = Pick<TAppConnection, "name" | "id" | "projectId">;
 
@@ -214,6 +217,7 @@ export type TDeleteAppConnectionDTO = {
 //   [AppConnection.DigitalOcean]: TDigitalOceanConnection;
 //   [AppConnection.Netlify]: TNetlifyConnection;
 //   [AppConnection.Okta]: TOktaConnection;
+//   [AppConnection.Coolify]: TCoolifyConnection;
 // };
 
 // scott: we will need this once we have individual app connection page

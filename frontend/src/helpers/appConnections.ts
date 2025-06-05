@@ -22,6 +22,7 @@ import {
   AzureKeyVaultConnectionMethod,
   CamundaConnectionMethod,
   CloudflareConnectionMethod,
+  CoolifyConnectionMethod,
   DatabricksConnectionMethod,
   FlyioConnectionMethod,
   GcpConnectionMethod,
@@ -138,7 +139,8 @@ export const APP_CONNECTION_MAP: Record<
     size: 65
   },
   [AppConnection.Chef]: { name: "Chef", image: "Chef.png", enterprise: true },
-  [AppConnection.OctopusDeploy]: { name: "Octopus Deploy", image: "Octopus Deploy.png" }
+  [AppConnection.OctopusDeploy]: { name: "Octopus Deploy", image: "Octopus Deploy.png" },
+  [AppConnection.Coolify]: { name: "Coolify", image: "Coolify.png" }
 };
 
 export const getAppConnectionMethodDetails = (method: TAppConnection["method"]) => {
@@ -178,6 +180,7 @@ export const getAppConnectionMethodDetails = (method: TAppConnection["method"]) 
     case NorthflankConnectionMethod.ApiToken:
     case OktaConnectionMethod.ApiToken:
     case LaravelForgeConnectionMethod.ApiToken:
+    case CoolifyConnectionMethod.ApiToken:
       return { name: "API Token", icon: faKey };
     case PostgresConnectionMethod.UsernameAndPassword:
     case MsSqlConnectionMethod.UsernameAndPassword:

@@ -22,6 +22,7 @@ import { CamundaConnectionForm } from "./CamundaConnectionForm";
 import { ChecklyConnectionForm } from "./ChecklyConnectionForm";
 import { ChefConnectionForm } from "./ChefConnectionForm";
 import { CloudflareConnectionForm } from "./CloudflareConnectionForm";
+import { CoolifyConnectionForm } from "./CoolifyConnectionForm";
 import { DatabricksConnectionForm } from "./DatabricksConnectionForm";
 import { DigitalOceanConnectionForm } from "./DigitalOceanConnectionForm";
 import { DNSMadeEasyConnectionForm } from "./DNSMadeEasyConnectionForm";
@@ -179,6 +180,8 @@ const CreateForm = ({ app, onComplete, projectId }: CreateFormProps) => {
       return <MongoDBConnectionForm onSubmit={onSubmit} />;
     case AppConnection.OctopusDeploy:
       return <OctopusDeployConnectionForm onSubmit={onSubmit} />;
+    case AppConnection.Coolify:
+      return <CoolifyConnectionForm onSubmit={onSubmit} />;
     default:
       throw new Error(`Unhandled App ${app}`);
   }
@@ -341,6 +344,8 @@ const UpdateForm = ({ appConnection, onComplete }: UpdateFormProps) => {
       return <MongoDBConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
     case AppConnection.OctopusDeploy:
       return <OctopusDeployConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
+    case AppConnection.Coolify:
+      return <CoolifyConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
     default:
       throw new Error(`Unhandled App ${(appConnection as TAppConnection).app}`);
   }

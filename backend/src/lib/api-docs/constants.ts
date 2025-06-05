@@ -2554,6 +2554,10 @@ export const AppConnections = {
     OCTOPUS_DEPLOY: {
       instanceUrl: "The Octopus Deploy instance URL to connect to.",
       apiKey: "The API key used to authenticate with Octopus Deploy."
+    },
+    COOLIFY: {
+      instanceUrl: "The Coolify instance URL to connect with",
+      apiToken: "The API token used to access the Coolify server"
     }
   }
 };
@@ -2816,6 +2820,9 @@ export const SecretSyncs = {
       projectName: "The name of the Northflank project to sync secrets to.",
       secretGroupId: "The ID of the Northflank secret group to sync secrets to.",
       secretGroupName: "The name of the Northflank secret group to sync secrets to."
+    },
+    COOLIFY: {
+      ApplicationId: "The UUID of the application or service to sync secret to."
     }
   }
 };
