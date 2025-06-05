@@ -95,6 +95,7 @@ import {
   validateWindmillConnectionCredentials,
   WindmillConnectionMethod
 } from "./windmill";
+import { getCoolifyConnectionListItem, validateCoolifyConnectionCredentials } from "./coolify/coolify-connection-fns";
 
 export const listAppConnectionOptions = () => {
   return [
@@ -121,7 +122,8 @@ export const listAppConnectionOptions = () => {
     getTeamCityConnectionListItem(),
     getOCIConnectionListItem(),
     getOracleDBConnectionListItem(),
-    getOnePassConnectionListItem()
+    getOnePassConnectionListItem(),
+    getCoolifyConnectionListItem(),
   ].sort((a, b) => a.name.localeCompare(b.name));
 };
 
@@ -196,7 +198,8 @@ export const validateAppConnectionCredentials = async (
     [AppConnection.TeamCity]: validateTeamCityConnectionCredentials as TAppConnectionCredentialsValidator,
     [AppConnection.OCI]: validateOCIConnectionCredentials as TAppConnectionCredentialsValidator,
     [AppConnection.OracleDB]: validateSqlConnectionCredentials as TAppConnectionCredentialsValidator,
-    [AppConnection.OnePass]: validateOnePassConnectionCredentials as TAppConnectionCredentialsValidator
+    [AppConnection.OnePass]: validateOnePassConnectionCredentials as TAppConnectionCredentialsValidator,
+    [AppConnection.Coolify]: validateCoolifyConnectionCredentials as TAppConnectionCredentialsValidator
   };
 
   return VALIDATE_APP_CONNECTION_CREDENTIALS_MAP[appConnection.app](appConnection);
@@ -299,7 +302,8 @@ export const TRANSITION_CONNECTION_CREDENTIALS_TO_PLATFORM: Record<
   [AppConnection.TeamCity]: platformManagedCredentialsNotSupported,
   [AppConnection.OCI]: platformManagedCredentialsNotSupported,
   [AppConnection.OracleDB]: transferSqlConnectionCredentialsToPlatform as TAppConnectionTransitionCredentialsToPlatform,
-  [AppConnection.OnePass]: platformManagedCredentialsNotSupported
+  [AppConnection.OnePass]: platformManagedCredentialsNotSupported,
+  [AppConnection.Coolify]: platformManagedCredentialsNotSupported
 };
 
 export const enterpriseAppCheck = async (
