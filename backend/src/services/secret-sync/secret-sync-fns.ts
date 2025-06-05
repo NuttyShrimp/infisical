@@ -571,6 +571,9 @@ export const SecretSyncFns = {
       case SecretSync.Snowflake:
         secretMap = await SnowflakeSyncFns.getSecrets(secretSync);
         break;
+      case SecretSync.Coolify:
+        secretMap = await CoolifySyncFns.getSecrets(secretSync);
+        break;
       default:
         throw new Error(
           `Unhandled sync destination for get secrets fns: ${(secretSync as TSecretSyncWithCredentials).destination}`
@@ -702,6 +705,8 @@ export const SecretSyncFns = {
         return TravisCISyncFns.removeSecrets(secretSync, schemaSecretMap);
       case SecretSync.Snowflake:
         return SnowflakeSyncFns.removeSecrets(secretSync, schemaSecretMap);
+      case SecretSync.Coolify:
+        return CoolifySyncFns.removeSecrets(secretSync, schemaSecretMap);
       default:
         throw new Error(
           `Unhandled sync destination for remove secrets fns: ${(secretSync as TSecretSyncWithCredentials).destination}`
