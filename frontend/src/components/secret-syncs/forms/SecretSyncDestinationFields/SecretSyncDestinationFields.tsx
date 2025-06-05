@@ -17,6 +17,7 @@ import { ChefSyncFields } from "./ChefSyncFields";
 import { CircleCISyncFields } from "./CircleCISyncFields";
 import { CloudflarePagesSyncFields } from "./CloudflarePagesSyncFields";
 import { CloudflareWorkersSyncFields } from "./CloudflareWorkersSyncFields";
+import { CoolifySyncFields } from "./CoolifySyncFields";
 import { DatabricksSyncFields } from "./DatabricksSyncFields";
 import { DevinSyncFields } from "./DevinSyncFields";
 import { DigitalOceanAppPlatformSyncFields } from "./DigitalOceanAppPlatformSyncFields";
@@ -136,6 +137,8 @@ export const SecretSyncDestinationFields = () => {
       return <TravisCISyncFields />;
     case SecretSync.Snowflake:
       return <SnowflakeSyncFields />;
+    case SecretSync.Coolify:
+      return <CoolifySyncFields />;
     default:
       throw new Error(`Unhandled Destination Config Field: ${destination}`);
   }

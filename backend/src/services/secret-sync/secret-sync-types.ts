@@ -200,6 +200,7 @@ import {
 import { TTravisCISync, TTravisCISyncInput, TTravisCISyncListItem, TTravisCISyncWithCredentials } from "./travis-ci";
 import { TVercelSync, TVercelSyncInput, TVercelSyncListItem, TVercelSyncWithCredentials } from "./vercel";
 import { TZabbixSync, TZabbixSyncInput, TZabbixSyncListItem, TZabbixSyncWithCredentials } from "./zabbix";
+import { TCoolifySync, TCoolifySyncInput, TCoolifySyncListItem, TCoolifySyncWithCredentials } from "./coolify";
 
 export type TSecretSync =
   | TAwsParameterStoreSync
@@ -242,7 +243,8 @@ export type TSecretSync =
   | TDevinSync
   | TOnaSync
   | TTravisCISync
-  | TSnowflakeSync;
+  | TSnowflakeSync
+  | TCoolifySync;
 
 export type TSecretSyncWithCredentials =
   | TAwsParameterStoreSyncWithCredentials
@@ -286,7 +288,8 @@ export type TSecretSyncWithCredentials =
   | TDevinSyncWithCredentials
   | TOnaSyncWithCredentials
   | TTravisCISyncWithCredentials
-  | TSnowflakeSyncWithCredentials;
+  | TSnowflakeSyncWithCredentials
+  | TCoolifySyncWithCredentials;
 
 export type TSecretSyncInput =
   | TAwsParameterStoreSyncInput
@@ -330,7 +333,8 @@ export type TSecretSyncInput =
   | TDevinSyncInput
   | TOnaSyncInput
   | TTravisCISyncInput
-  | TSnowflakeSyncInput;
+  | TSnowflakeSyncInput
+  | TCoolifySyncInput;
 
 export type TSecretSyncListItem =
   | TAwsParameterStoreSyncListItem
@@ -374,7 +378,8 @@ export type TSecretSyncListItem =
   | TDevinSyncListItem
   | TOnaSyncListItem
   | TTravisCISyncListItem
-  | TSnowflakeSyncListItem;
+  | TSnowflakeSyncListItem
+  | TCoolifySyncListItem;
 
 export type TSyncOptionsConfig = {
   canImportSecrets: boolean;

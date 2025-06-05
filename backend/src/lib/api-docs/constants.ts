@@ -3237,7 +3237,7 @@ export const SecretSyncs = {
       schema: "The name of the Snowflake schema (within the database) to sync secrets to."
     },
     COOLIFY: {
-      ApplicationId: "The UUID of the application or service to sync secret to."
+      applicationId: "The UUID of the application or service to sync secret to."
     }
   }
 };
