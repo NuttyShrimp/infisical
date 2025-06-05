@@ -22,6 +22,7 @@ import {
   AzureKeyVaultConnectionMethod,
   CamundaConnectionMethod,
   CloudflareConnectionMethod,
+  CoolifyConnectionMethod,
   DatabricksConnectionMethod,
   DbtConnectionMethod,
   DevinConnectionMethod,
@@ -181,7 +182,8 @@ export const APP_CONNECTION_MAP: Record<
   [AppConnection.TravisCI]: { name: "Travis CI", image: "Travis CI.png" },
   [AppConnection.Salesforce]: { name: "Salesforce", image: "Salesforce.png" },
   [AppConnection.Snowflake]: { name: "Snowflake", image: "Snowflake.png" },
-  [AppConnection.Datadog]: { name: "Datadog", image: "DatadogWhite.png" }
+  [AppConnection.Datadog]: { name: "Datadog", image: "DatadogWhite.png" },
+  [AppConnection.Coolify]: { name: "Coolify", image: "Coolify.png" }
 };
 
 export const getAppConnectionMethodDetails = (method: TAppConnection["method"]) => {
@@ -227,6 +229,7 @@ export const getAppConnectionMethodDetails = (method: TAppConnection["method"]) 
     case CircleCIConnectionMethod.ApiToken:
     case TravisCIConnectionMethod.ApiToken:
     case DopplerConnectionMethod.ApiToken:
+    case CoolifyConnectionMethod.ApiToken:
       return { name: "API Token", icon: faKey };
     case VenafiConnectionMethod.ApiKey:
       return { name: "API Key", icon: faKey };
