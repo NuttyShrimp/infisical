@@ -44,6 +44,7 @@ import {
   CamundaConnectionListItemSchema,
   SanitizedCamundaConnectionSchema
 } from "@app/services/app-connection/camunda";
+import { CoolifyConnectionListItemSchema, SanitizedCoolifyConnectionSchema } from "@app/services/app-connection/coolify";
 import {
   ChecklyConnectionListItemSchema,
   SanitizedChecklyConnectionSchema
@@ -163,7 +164,8 @@ const SanitizedAppConnectionSchema = z.union([
   ...SanitizedOktaConnectionSchema.options,
   ...SanitizedAzureADCSConnectionSchema.options,
   ...SanitizedRedisConnectionSchema.options,
-  ...SanitizedLaravelForgeConnectionSchema.options
+  ...SanitizedLaravelForgeConnectionSchema.options,
+  ...SanitizedCoolifyConnectionSchema.options
 ]);
 
 const AppConnectionOptionsSchema = z.discriminatedUnion("app", [
@@ -206,7 +208,8 @@ const AppConnectionOptionsSchema = z.discriminatedUnion("app", [
   OktaConnectionListItemSchema,
   AzureADCSConnectionListItemSchema,
   RedisConnectionListItemSchema,
-  LaravelForgeConnectionListItemSchema
+  LaravelForgeConnectionListItemSchema,
+  CoolifyConnectionListItemSchema
 ]);
 
 export const registerAppConnectionRouter = async (server: FastifyZodProvider) => {
