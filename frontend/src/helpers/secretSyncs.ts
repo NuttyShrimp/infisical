@@ -270,6 +270,12 @@ export const SECRET_SYNC_MAP: Record<
     image: "Snowflake.png",
     category: "DATA",
     description: "Secret objects in a Snowflake account."
+  },
+  [SecretSync.Coolify]: {
+    name: "Coolify",
+    image: "Coolify.png",
+    category: "HOSTING",
+    description: "Environment variables for Coolify Project."
   }
 };
 
@@ -322,7 +328,8 @@ export const SECRET_SYNC_CONNECTION_MAP: Record<SecretSync, AppConnection> = {
   [SecretSync.Devin]: AppConnection.Devin,
   [SecretSync.Ona]: AppConnection.Ona,
   [SecretSync.TravisCI]: AppConnection.TravisCI,
-  [SecretSync.Snowflake]: AppConnection.Snowflake
+  [SecretSync.Snowflake]: AppConnection.Snowflake,
+  [SecretSync.Coolify]: AppConnection.Coolify
 };
 
 export const SECRET_SYNC_INITIAL_SYNC_BEHAVIOR_MAP: Record<

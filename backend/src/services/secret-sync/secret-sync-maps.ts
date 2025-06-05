@@ -44,7 +44,8 @@ export const SECRET_SYNC_NAME_MAP: Record<SecretSync, string> = {
   [SecretSync.Devin]: "Devin",
   [SecretSync.Ona]: "Ona",
   [SecretSync.TravisCI]: "Travis CI",
-  [SecretSync.Snowflake]: "Snowflake"
+  [SecretSync.Snowflake]: "Snowflake",
+  [SecretSync.Coolify]: "Coolify"
 };
 
 export const SECRET_SYNC_CONNECTION_MAP: Record<SecretSync, AppConnection> = {
@@ -89,7 +90,8 @@ export const SECRET_SYNC_CONNECTION_MAP: Record<SecretSync, AppConnection> = {
   [SecretSync.Devin]: AppConnection.Devin,
   [SecretSync.Ona]: AppConnection.Ona,
   [SecretSync.TravisCI]: AppConnection.TravisCI,
-  [SecretSync.Snowflake]: AppConnection.Snowflake
+  [SecretSync.Snowflake]: AppConnection.Snowflake,
+  [SecretSync.Coolify]: AppConnection.Coolify
 };
 
 export const SECRET_SYNC_PLAN_MAP: Record<SecretSync, SecretSyncPlanType> = {
@@ -134,7 +136,8 @@ export const SECRET_SYNC_PLAN_MAP: Record<SecretSync, SecretSyncPlanType> = {
   [SecretSync.Devin]: SecretSyncPlanType.Regular,
   [SecretSync.Ona]: SecretSyncPlanType.Regular,
   [SecretSync.TravisCI]: SecretSyncPlanType.Regular,
-  [SecretSync.Snowflake]: SecretSyncPlanType.Regular
+  [SecretSync.Snowflake]: SecretSyncPlanType.Regular,
+  [SecretSync.Coolify]: SecretSyncPlanType.Regular
 };
 
 export const SECRET_SYNC_SKIP_FIELDS_MAP: Record<SecretSync, string[]> = {
@@ -188,7 +191,8 @@ export const SECRET_SYNC_SKIP_FIELDS_MAP: Record<SecretSync, string[]> = {
   [SecretSync.Devin]: [],
   [SecretSync.Ona]: ["projectName"],
   [SecretSync.TravisCI]: ["repositorySlug"],
-  [SecretSync.Snowflake]: []
+  [SecretSync.Snowflake]: [],
+  [SecretSync.Coolify]: []
 };
 
 const defaultDuplicateCheck: DestinationDuplicateCheckFn = () => true;
@@ -259,7 +263,8 @@ export const DESTINATION_DUPLICATE_CHECK_MAP: Record<SecretSync, DestinationDupl
   [SecretSync.Devin]: defaultDuplicateCheck,
   [SecretSync.Ona]: defaultDuplicateCheck,
   [SecretSync.TravisCI]: defaultDuplicateCheck,
-  [SecretSync.Snowflake]: defaultDuplicateCheck
+  [SecretSync.Snowflake]: defaultDuplicateCheck,
+  [SecretSync.Coolify]: defaultDuplicateCheck
 };
 
 /**
