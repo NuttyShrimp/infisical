@@ -44,7 +44,10 @@ import {
   CamundaConnectionListItemSchema,
   SanitizedCamundaConnectionSchema
 } from "@app/services/app-connection/camunda";
-import { CoolifyConnectionListItemSchema, SanitizedCoolifyConnectionSchema } from "@app/services/app-connection/coolify";
+import {
+  CoolifyConnectionListItemSchema,
+  SanitizedCoolifyConnectionSchema
+} from "@app/services/app-connection/coolify";
 import {
   ChecklyConnectionListItemSchema,
   SanitizedChecklyConnectionSchema
