@@ -63,6 +63,7 @@ import {
   getCloudflareConnectionListItem,
   validateCloudflareConnectionCredentials
 } from "./cloudflare/cloudflare-connection-fns";
+import { getCoolifyConnectionListItem, validateCoolifyConnectionCredentials } from "./coolify/coolify-connection-fns";
 import {
   DatabricksConnectionMethod,
   getDatabricksConnectionListItem,
@@ -126,7 +127,6 @@ import {
   WindmillConnectionMethod
 } from "./windmill";
 import { getZabbixConnectionListItem, validateZabbixConnectionCredentials, ZabbixConnectionMethod } from "./zabbix";
-import { getCoolifyConnectionListItem, validateCoolifyConnectionCredentials } from "./coolify/coolify-connection-fns";
 
 export const listAppConnectionOptions = () => {
   return [
