@@ -51,6 +51,7 @@ import {
   validateAzureKeyVaultConnectionCredentials
 } from "./azure-key-vault";
 import { CamundaConnectionMethod, getCamundaConnectionListItem, validateCamundaConnectionCredentials } from "./camunda";
+import { getCoolifyConnectionListItem, validateCoolifyConnectionCredentials } from "./coolify/coolify-connection-fns";
 import {
   DatabricksConnectionMethod,
   getDatabricksConnectionListItem,
@@ -95,7 +96,6 @@ import {
   validateWindmillConnectionCredentials,
   WindmillConnectionMethod
 } from "./windmill";
-import { getCoolifyConnectionListItem, validateCoolifyConnectionCredentials } from "./coolify/coolify-connection-fns";
 
 export const listAppConnectionOptions = () => {
   return [
@@ -123,7 +123,7 @@ export const listAppConnectionOptions = () => {
     getOCIConnectionListItem(),
     getOracleDBConnectionListItem(),
     getOnePassConnectionListItem(),
-    getCoolifyConnectionListItem(),
+    getCoolifyConnectionListItem()
   ].sort((a, b) => a.name.localeCompare(b.name));
 };
 
