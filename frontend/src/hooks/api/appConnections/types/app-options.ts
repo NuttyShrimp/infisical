@@ -277,6 +277,10 @@ export type TDatadogConnectionOption = TAppConnectionOptionBase & {
   app: AppConnection.Datadog;
 };
 
+export type TCoolifyConnectionOption = TAppConnectionOptionBase & {
+  app: AppConnection.Coolify;
+};
+
 export type TAppConnectionOption =
   | TAwsConnectionOption
   | TGitHubConnectionOption
@@ -343,7 +347,8 @@ export type TAppConnectionOption =
   | TTravisCIConnectionOption
   | TSalesforceConnectionOption
   | TSnowflakeConnectionOption
-  | TDatadogConnectionOption;
+  | TDatadogConnectionOption
+  | TCoolifyConnectionOption;
 
 export type TAppConnectionOptionMap = {
   [AppConnection.AWS]: TAwsConnectionOption;
@@ -412,4 +417,5 @@ export type TAppConnectionOptionMap = {
   [AppConnection.Salesforce]: TSalesforceConnectionOption;
   [AppConnection.Snowflake]: TSnowflakeConnectionOption;
   [AppConnection.Datadog]: TDatadogConnectionOption;
+  [AppConnection.Coolify]: TCoolifyConnectionOption;
 };
