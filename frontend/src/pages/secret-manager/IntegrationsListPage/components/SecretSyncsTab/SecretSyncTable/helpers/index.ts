@@ -115,6 +115,7 @@ export const getSecretSyncDestinationColValues = (secretSync: TSecretSync) => {
     case SecretSync.AzureDevOps:
       primaryText = destinationConfig.devopsProjectName;
       secondaryText = destinationConfig.devopsProjectId;
+      break;
     case SecretSync.Coolify:
       primaryText = destinationConfig.appId;
       secondaryText = "Application ID";
