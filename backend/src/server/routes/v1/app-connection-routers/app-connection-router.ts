@@ -45,10 +45,6 @@ import {
   SanitizedCamundaConnectionSchema
 } from "@app/services/app-connection/camunda";
 import {
-  CoolifyConnectionListItemSchema,
-  SanitizedCoolifyConnectionSchema
-} from "@app/services/app-connection/coolify";
-import {
   ChecklyConnectionListItemSchema,
   SanitizedChecklyConnectionSchema
 } from "@app/services/app-connection/checkly";
@@ -56,6 +52,10 @@ import {
   CloudflareConnectionListItemSchema,
   SanitizedCloudflareConnectionSchema
 } from "@app/services/app-connection/cloudflare/cloudflare-connection-schema";
+import {
+  CoolifyConnectionListItemSchema,
+  SanitizedCoolifyConnectionSchema
+} from "@app/services/app-connection/coolify";
 import {
   DatabricksConnectionListItemSchema,
   SanitizedDatabricksConnectionSchema
