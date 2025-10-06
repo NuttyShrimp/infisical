@@ -14,6 +14,7 @@ import { SecretSync, TSecretSync } from "@app/hooks/api/secretSyncs";
 
 import { AwsParameterStoreSyncOptionsSection } from "./AwsParameterStoreSyncOptionsSection";
 import { AwsSecretsManagerSyncOptionsSection } from "./AwsSecretsManagerSyncOptionsSection";
+import { CoolifySyncOptionsSection } from "./CoolifySyncOptionsSection";
 import { RenderSyncOptionsSection } from "./RenderSyncOptionsSection";
 
 type Props = {
@@ -45,6 +46,9 @@ export const SecretSyncOptionsSection = ({ secretSync, onEditOptions }: Props) =
     case SecretSync.Render:
       AdditionalSyncOptionsComponent = <RenderSyncOptionsSection secretSync={secretSync} />;
       break;
+    case SecretSync.Coolify:
+      AdditionalSyncOptionsComponent = <CoolifySyncOptionsSection secretSync={secretSync} />;
+      break;
     case SecretSync.GitHub:
     case SecretSync.GCPSecretManager:
     case SecretSync.AzureKeyVault:
@@ -73,7 +77,6 @@ export const SecretSyncOptionsSection = ({ secretSync, onEditOptions }: Props) =
     case SecretSync.Netlify:
     case SecretSync.Bitbucket:
     case SecretSync.LaravelForge:
-    case SecretSync.Coolify:
       AdditionalSyncOptionsComponent = null;
       break;
     default:
