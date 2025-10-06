@@ -27,7 +27,7 @@ import { ChecklySyncReviewFields } from "./ChecklySyncReviewFields";
 import { ChefSyncReviewFields } from "./ChefSyncReviewFields";
 import { CloudflarePagesSyncReviewFields } from "./CloudflarePagesReviewFields";
 import { CloudflareWorkersSyncReviewFields } from "./CloudflareWorkersReviewFields";
-import { CoolifySyncReviewFields } from "./CoolifySyncReviewFields";
+import { CoolifySyncOptionsReviewFields, CoolifySyncReviewFields } from "./CoolifySyncReviewFields";
 import { DatabricksSyncReviewFields } from "./DatabricksSyncReviewFields";
 import { DigitalOceanAppPlatformSyncReviewFields } from "./DigitalOceanAppPlatformSyncReviewFields";
 import { FlyioSyncReviewFields } from "./FlyioSyncReviewFields";
@@ -188,6 +188,7 @@ export const SecretSyncReviewFields = () => {
       break;
     case SecretSync.Coolify:
       DestinationFieldsComponent = <CoolifySyncReviewFields />;
+      AdditionalSyncOptionsFieldsComponent = <CoolifySyncOptionsReviewFields />;
       break;
     default:
       throw new Error(`Unhandled Destination Review Fields: ${destination}`);
