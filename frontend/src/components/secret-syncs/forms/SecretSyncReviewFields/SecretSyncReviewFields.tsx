@@ -44,7 +44,7 @@ import {
   CloudflareWorkersSyncOptionsReviewFields,
   CloudflareWorkersSyncReviewFields
 } from "./CloudflareWorkersReviewFields";
-import { CoolifySyncReviewFields } from "./CoolifySyncReviewFields";
+import { CoolifySyncOptionsReviewFields, CoolifySyncReviewFields } from "./CoolifySyncReviewFields";
 import { DatabricksSyncReviewFields } from "./DatabricksSyncReviewFields";
 import { DevinSyncReviewFields } from "./DevinSyncReviewFields";
 import { DigitalOceanAppPlatformSyncReviewFields } from "./DigitalOceanAppPlatformSyncReviewFields";
@@ -272,6 +272,7 @@ export const SecretSyncReviewFields = () => {
       break;
     case SecretSync.Coolify:
       DestinationFieldsComponent = <CoolifySyncReviewFields />;
+      AdditionalSyncOptionsFieldsComponent = <CoolifySyncOptionsReviewFields />;
       break;
     default:
       throw new Error(`Unhandled Destination Review Fields: ${destination}`);
