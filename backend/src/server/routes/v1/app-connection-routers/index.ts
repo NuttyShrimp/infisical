@@ -179,6 +179,6 @@ export const APP_CONNECTION_REGISTER_ROUTER_MAP: Record<AppConnection, (server: 
     [AppConnection.NutanixPrismCentral]: registerNutanixPrismCentralConnectionRouter,
     [AppConnection.Spacelift]: registerSpaceliftConnectionRouter,
     [AppConnection.Daytona]: registerDaytonaConnectionRouter,
-    [AppConnection.Stripe]: registerStripeConnectionRouter
+    [AppConnection.Stripe]: registerStripeConnectionRouter,
     [AppConnection.Coolify]: registerCoolifyConnectionRouter
   };
